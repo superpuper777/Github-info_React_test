@@ -1,0 +1,24 @@
+@import '../_variables.scss';
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 22px;
+  padding: $main-pad;
+  background: #0064EB;
+  height: 72px;
+  &-search-wrapper {
+    padding: 8px 200px 8px 44px;
+    background: #ffffff;
+    background-image: url(../assets/img/image.svg);
+    background-repeat: no-repeat;
+    background-position: center left 5%;
+    border-radius: 6px;
+    
+    &-search-wrapper-item {
+      border: none;
+      outline: none;
+    }
+  }
+}

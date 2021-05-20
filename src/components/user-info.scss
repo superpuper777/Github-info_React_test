@@ -1,0 +1,63 @@
+@import '../_variables.scss';
+
+.user__profile {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 96px 0px 56px;
+
+  // padding: $main-pad;
+  &__photo {
+    width: 280px;
+    height: 280px;
+
+    &-item {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__user {
+    font-family: Inter;
+    font-style: normal;
+
+    &__full-name {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 130%;
+    }
+
+    &__nickname {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: $main-blue-color;
+
+      &-link {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    gap: 20px;
+
+    &-followers {
+      padding-left: 30px;
+      background-image: url(../assets/img/user_prof_icon_followers.svg);
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
+
+    &-following {
+      padding-left: 30px;
+      background-image: url(../assets/img/user_prof_icon_following.svg);
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
+
+  }
+
+}
