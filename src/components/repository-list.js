@@ -16,7 +16,7 @@ const RepositoryList = ({ repos }) => {
   return (
     <div>
     <h2 className="repos__title">Repositories (249)</h2>
-    <ul>{elements}</ul>
+    <ul className="repos__list-items">{elements}</ul>
     </div>
     
   );

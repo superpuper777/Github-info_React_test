@@ -1,0 +1,25 @@
+@import '../_variables.scss';
+
+.repo_list_item {
+  background: #ffffff;
+  padding: 24px 32px;
+  margin: 24px 56px 24px 0;
+  border-radius: 6px;
+
+  &__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $main-blue-color;
+    margin: 16px 0px;
+    cursor: pointer;
+  }
+
+  &__descrip{
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+}

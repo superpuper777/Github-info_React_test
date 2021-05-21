@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import useDebounce from "./use-debounce";
 import Header from "./components/header";
 import RepositoryList from './components/repository-list';
 import ResultPanel from './components/result-panel';
-import useDebounce from "./use-debounce";
-import "./index.scss";
 import UserInfo from "./components/user-info";
+import Pagination from './components/pagination';
+import "./index.scss";
+
 
 const App = () => {
   const repos = [
@@ -46,7 +48,8 @@ const App = () => {
         right={
           <RepositoryList repos={repos} />
         }
-        />
+      />
+      <Pagination />
       <input
         type="text"
         value={searchTerm}

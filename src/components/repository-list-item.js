@@ -1,10 +1,11 @@
 import React from 'react';
+import './repository-list-item.scss';
 
 const RepositoryListItem = ({ label, description }) => {
   return (
-    <div>
-      <p>{label}</p>
-      <p>{description}</p>
+    <div className="repo_list_item">
+      <p className="repo_list_item__title">{label}</p>
+      <p className="repo_list_item__descrip">{description}</p>
     </div>
     
   )
