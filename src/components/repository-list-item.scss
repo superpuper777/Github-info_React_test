@@ -15,6 +15,9 @@
     color: $main-blue-color;
     margin: 16px 0px;
     cursor: pointer;
+    &-link {
+      text-decoration: none;
+    }
   }
 
   &__descrip{
