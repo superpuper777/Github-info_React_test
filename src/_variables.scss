@@ -1,2 +1,27 @@
 $main-blue-color: #0064EB;
 $main-pad: 0 40px;
+
+%arrow {
+	width: 6px;
+	height: 6px;
+	box-sizing: border-box;
+	position: absolute;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #808080;
+    cursor: pointer;
+
+   
+  }
+  &:hover::before {
+    border-color: $main-blue-color;
+  }
+ 
+}
+	

@@ -14,9 +14,8 @@ const App = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [perPage, setPerPage] = useState(10);
+  const [perPage, setPerPage] = useState(5);
   const [searchTerm, setSearchTerm] = useState("gaearon");
-  // const [isSearching, setIsSearching] = useState(false);
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
   useEffect(() => {
@@ -50,7 +49,7 @@ const App = () => {
         left={<UserInfo user={user} loading={loading}/>}
         right={<RepositoryList user={user} repos={repos} loading={loading} />}
       />
-      <Pagination />
+      <Pagination perPage={perPage} totalRepos={repos.length}/>
        <input
         type="text"
         value={searchTerm}
