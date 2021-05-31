@@ -2,9 +2,9 @@ import React from 'react';
 
 import logo from '../assets/img/header-logo.svg';
 import './header.scss';
+import Search from './search';
 
 const Header = () => {
-  
   return (
     <div>
       <header className="header">
@@ -12,7 +12,7 @@ const Header = () => {
           <img src={logo} alt="logo"></img>
         </div>
         <div className="header-search-wrapper">
-          <input type="text" className="header-search-wrapper-item"></input>
+          <Search />
         </div>
       </header>
     </div>

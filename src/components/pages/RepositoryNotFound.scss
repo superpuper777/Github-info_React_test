@@ -1,0 +1,13 @@
+@import '../../variables';
+
+.rep_not_found{
+  @extend %page;
+  gap: 24px;
+
+  &__text {
+    @extend %main_text; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+}

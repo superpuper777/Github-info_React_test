@@ -1,0 +1,12 @@
+@import '../../variables';
+.initial_state{
+  @extend %page;
+  gap: 46.92px;
+
+  &__text {
+    @extend %main_text; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+}

@@ -1,0 +1,10 @@
+@import '../../variables';
+
+.user_not_found {
+  @extend %page;
+  gap: 24px;
+
+  &__text {
+    @extend %main_text;
+  }
+}

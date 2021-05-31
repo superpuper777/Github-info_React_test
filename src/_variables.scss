@@ -2,10 +2,10 @@ $main-blue-color: #0064EB;
 $main-pad: 0 40px;
 
 %arrow {
-	width: 6px;
-	height: 6px;
-	box-sizing: border-box;
-	position: absolute;
+  width: 6px;
+  height: 6px;
+  box-sizing: border-box;
+  position: absolute;
 
   &::before {
     content: '';
@@ -17,11 +17,29 @@ $main-pad: 0 40px;
     border-color: #808080;
     cursor: pointer;
 
-   
+
   }
+
   &:hover::before {
     border-color: $main-blue-color;
   }
- 
+
 }
-	
+
+%main_text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 140%;
+  color: #808080;
+}
+
+%page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
