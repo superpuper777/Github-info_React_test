@@ -1,5 +1,5 @@
 import React from 'react';
-import './user-info.scss';
+import './UserInfo.scss';
 
 const UserInfo = ({ user, loading }) => {
   const { name, avatar_url, login, html_url, followers, following } = user;

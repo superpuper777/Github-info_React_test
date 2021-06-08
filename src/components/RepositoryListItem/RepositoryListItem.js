@@ -1,5 +1,5 @@
 import React from 'react';
-import './repository-list-item.scss';
+import './RepositoryListItem.scss';
 
 const RepositoryListItem = ({ repo }) => {
   const { html_url, name, description } = repo;

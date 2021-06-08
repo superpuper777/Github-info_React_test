@@ -1,4 +1,4 @@
-@import '../_variables.scss';
+@import '../../_variables.scss';
 
 .user__profile {
   display: flex;
@@ -46,14 +46,14 @@
 
     &-followers {
       padding-left: 30px;
-      background-image: url(../assets/img/user_prof_icon_followers.svg);
+      background-image: url(../../assets/img/user_prof_icon_followers.svg);
       background-repeat: no-repeat;
       background-position: center left;
     }
 
     &-following {
       padding-left: 30px;
-      background-image: url(../assets/img/user_prof_icon_following.svg);
+      background-image: url(../../assets/img/user_prof_icon_following.svg);
       background-repeat: no-repeat;
       background-position: center left;
     }

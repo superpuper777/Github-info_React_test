@@ -1,7 +1,7 @@
 import React from "react";
-import RepositoryListItem from './repository-list-item';
+import RepositoryListItem from '../RepositoryListItem/RepositoryListItem';
 
-import './repository-list.scss';
+import './RepositoryList.scss';
 
 const RepositoryList = ({ user, repos, loading }) => {
   const { public_repos } = user;

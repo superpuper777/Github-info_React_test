@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./header.scss";
+import "../Header/Header.scss";
 // import useDebounce from "./use-debounce";
 
 const Search = ({ dispatch, setLoading }) => {

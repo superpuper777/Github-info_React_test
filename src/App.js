@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 
-import Header from "./components/header";
-import RepositoryList from "./components/repository-list";
-import ResultPanel from "./components/result-panel";
-import UserInfo from "./components/user-info";
-import Pagination from "./components/pagination";
+import Header from './components/Header/Header';
+import RepositoryList from "./components/RepositoryList/RepositoryList";
+import ResultPanel from "./components/ResultPanel/ResultPanel";
+import UserInfo from "./components/UserInfo/UserInfo";
+import Pagination from "./components/Pagination/Pagination";
 import InitialState from "./components/pages/InitialState";
 
 const App = () => {
