@@ -2,9 +2,9 @@ import React from 'react';
 
 import logo from '../assets/img/header-logo.svg';
 import './header.scss';
-import Search from './search';
-
-const Header = () => {
+import Search from './Search';
+// dispatch
+const Header = ({ dispatch, setLoading }) => {
   return (
     <div>
       <header className="header">
@@ -12,7 +12,8 @@ const Header = () => {
           <img src={logo} alt="logo"></img>
         </div>
         <div className="header-search-wrapper">
-          <Search />
+        
+          <Search dispatch={dispatch} setLoading={setLoading} />
         </div>
       </header>
     </div>
