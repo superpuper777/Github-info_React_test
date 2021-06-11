@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../Header/Header.scss";
+import "./Search.scss"
 // import useDebounce from "./use-debounce";
 
 const Search = ({ dispatch, setLoading }) => {
@@ -11,8 +11,9 @@ const Search = ({ dispatch, setLoading }) => {
       setLoading(true);
       const getRepos = async () => {
         const response = await axios.get(
-          `https://api.github.com/users/${searchTerm}/repos`
+          `https://api.github.com/users/${searchTerm}/repos?&page=1&per_page=25`
         );
+        console.log(response)
         dispatch({ data: response.data, type: "repos" });
         setLoading(false);
       };
@@ -29,6 +30,7 @@ const Search = ({ dispatch, setLoading }) => {
   }, [searchTerm, setLoading, dispatch]);
   return (
     <input
+      className="search"
       type="text"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}

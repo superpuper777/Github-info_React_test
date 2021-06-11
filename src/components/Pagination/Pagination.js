@@ -8,22 +8,22 @@ const Pagination = ({ perPage, totalRepos }) => {
   }
   return (
     <div className="pagination">
-      <span className="pagination__count_pages">5-8 of 249 items</span>
+      <span className="pagination__count_pages">{perPage} of {totalRepos} items</span>
+      <div className="pagination__wrapper">
       <div class="pagination__arrow-left"></div>
       <nav className="pagination__list_page">
         <ul className="pagination__pages">
           {pageNumbers.map(number =>
-            <li key={number} className="pagination__pages_page-item">
-              <a href="!#" className="pagination__pages_page-link">
+            <li key={number} className="pagination__page-item">
+              <a href="!#" className="pagination__page-link">
                 {number}
               </a>
             </li>
             )}
         </ul>
-        
       </nav>
       <div class="pagination__arrow-right"></div>
-      
+      </div>
     </div>
   
   );
