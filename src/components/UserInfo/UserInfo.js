@@ -1,11 +1,12 @@
 import React from 'react';
 import './UserInfo.scss';
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const UserInfo = ({ user, loading }) => {
   const { name, avatar_url, login, html_url, followers, following } = user;
   console.log(user);
   if (loading) {
-    return <h2>Loading...</h2>
+    return <LoadingSpinner />
   }
 
     return (

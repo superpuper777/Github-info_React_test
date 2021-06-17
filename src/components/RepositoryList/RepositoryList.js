@@ -1,12 +1,13 @@
 import React from "react";
 import RepositoryListItem from '../RepositoryListItem/RepositoryListItem';
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 import './RepositoryList.scss';
 
 const RepositoryList = ({ user, repos, loading }) => {
   const { public_repos } = user;
   if (loading) {
-    return <h2>Loading...</h2>
+    return <LoadingSpinner />
   }
 
   return (

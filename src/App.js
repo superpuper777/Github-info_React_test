@@ -6,7 +6,6 @@ import RepositoryList from "./components/RepositoryList/RepositoryList";
 import ResultPanel from "./components/ResultPanel/ResultPanel";
 import UserInfo from "./components/UserInfo/UserInfo";
 import Pagination from "./components/Pagination/Pagination";
-import InitialState from "./components/pages/InitialState";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -28,7 +27,7 @@ const App = () => {
         default:
           return state;
     }
-  }, { user: {}, repos: [], page: 1 })
+  }, { user: {}, repos: [] })
 
   return (
     <div>
