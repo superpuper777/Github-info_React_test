@@ -10,8 +10,8 @@ import InitialState from "./components/pages/InitialState";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
-  // const [currentPage, setCurrentPage] = useState(1);
-  const [perPage, setPerPage] = useState(10);
+  const [perPage, setPerPage] = useState(25);
+  const [currentPage, setCurrentPage] = useState(1);
   
   const [state, dispatch] = React.useReducer((state, action) => {
     switch (action.type) {
@@ -28,16 +28,16 @@ const App = () => {
         default:
           return state;
     }
-  }, { user: {}, repos: [] })
+  }, { user: {}, repos: [], page: 1 })
 
   return (
     <div>
-      <Header dispatch={dispatch} setLoading={setLoading} />
+      <Header dispatch={dispatch} setLoading={setLoading} currentPage={currentPage}/>
       <ResultPanel
         left={<UserInfo user={state.user} loading={loading} />}
         right={<RepositoryList user={state.user} repos={state.repos} loading={loading} />}
       />
-      <Pagination perPage={perPage} totalRepos={state.user.public_repos} />
+      <Pagination perPage={perPage} totalRepos={state.user.public_repos} setCurrentPage={setCurrentPage} />
     </div>
   ) 
 };

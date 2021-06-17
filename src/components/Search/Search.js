@@ -3,17 +3,18 @@ import axios from "axios";
 import "./Search.scss"
 // import useDebounce from "./use-debounce";
 
-const Search = ({ dispatch, setLoading }) => {
+const Search = ({ dispatch, setLoading, currentPage }) => {
   const [searchTerm, setSearchTerm] = useState("");
-
+  
   useEffect(() => {
     if (searchTerm) {
       setLoading(true);
       const getRepos = async () => {
         const response = await axios.get(
-          `https://api.github.com/users/${searchTerm}/repos?&page=1&per_page=25`
+          `https://api.github.com/users/${searchTerm}/repos?&page=${currentPage}&per_page=25`
         );
         console.log(response)
+        console.log(currentPage);
         dispatch({ data: response.data, type: "repos" });
         setLoading(false);
       };
@@ -27,7 +28,7 @@ const Search = ({ dispatch, setLoading }) => {
       getUser();
       getRepos();
     }
-  }, [searchTerm, setLoading, dispatch]);
+  }, [searchTerm, setLoading, dispatch, currentPage]);
   return (
     <input
       className="search"
